@@ -2,12 +2,6 @@
 
 # Product Dissection for Swiggy
 
-<div style="text-align: right;">
-
-[_Rakshit Pandey_](https://www.linkedin.com/in/pandey-rakshit)
-
-</div>
-
 **Company Overview:**
 
 Swiggy, a well-known Indian online food ordering and delivery platform, was founded in August 2014 by Sriharsha Majety, Nandan Reddy, and Rahul Jaimini. Headquartered in Bangalore, Karnataka, Swiggy has rapidly expanded its services to cover over 580 cities across India as of July 2023. It operates as an online platform connecting customers with a wide range of restaurants and eateries, offering convenient and reliable food delivery services.
@@ -93,6 +87,140 @@ Swiggy competes with other major players in the food delivery and hyperlocal mar
 Swiggy's platform relies on a robust database schema to manage its complex operations, ensuring efficient data handling and seamless service delivery. Here is an overview of the key entities and their attributes:
 
 ---
+
+### User Entity:
+
+- **customer_id (Primary Key):** Unique identifier for each user.
+- **email:** User's email address for account-related communication.
+- **mobile:** User's contact number.
+- **verified:** Flag indicating whether the user is verified (0 - False, 1 - True).
+- **name:** User's full name as displayed on their profile.
+- **has_wallet:** Flag indicating whether the user has a wallet (0 - False, 1 - True).
+- **role:** Role of the user (customer, delivery_executive, restaurant_owner).
+- **created_on:** Date when the user joined Swiggy.
+- **updated_on:** Date when the user's information was last updated.
+
+### Address Entity:
+
+- **id (Primary Key):** Unique identifier for each address.
+- **addressable_id:** ID of the associated entity (user, restaurant, grocery store).
+- **addressable_type:** Type of entity the address is associated with (User, Restaurant, GroceryStore).
+- **name:** Name associated with the address.
+- **mobile:** Contact number associated with the address.
+- **area:** Area of the address.
+- **flat_no:** Flat number of the address.
+- **address:** Detailed address.
+- **city:** City of the address.
+- **lng:** Longitude of the address location.
+- **lat:** Latitude of the address location.
+- **annotation:** Additional notes about the address.
+- **default:** Flag indicating if the address is the default address (0 - False, 1 - True).
+- **reverse_geo_code_failed:** Flag indicating if reverse geocoding failed for the address (0 - False, 1 - True).
+- **is_edited:** Flag indicating if the address has been edited (0 - False, 1 - True).
+- **is_deleted:** Flag indicating if the address has been deleted (0 - False, 1 - True).
+- **updated_by:** Identifier of the user who last updated the address.
+- **created_on:** Date when the address was created.
+- **updated_on:** Date when the address was last updated.
+
+### Restaurant Entity:
+
+- **RestaurantID (Primary Key):** Unique identifier for each restaurant.
+- **OwnerID (Foreign Key):** Owner of the restaurant, referencing the users.customer_id.
+- **Name:** Name of the restaurant.
+- **CuisineType:** Type of cuisine offered by the restaurant.
+- **OpeningHours:** Opening hours of the restaurant.
+- **ClosingHours:** Closing hours of the restaurant.
+- **CreatedOn:** Date when the restaurant was added to the platform.
+- **UpdatedOn:** Date when the restaurant's information was last updated.
+- **IsDeleted:** Flag indicating if the restaurant is deleted (0 - False, 1 - True).
+
+### Menu Item Entity:
+
+- **ItemID (Primary Key):** Unique identifier for each menu item.
+- **RestaurantID (Foreign Key):** Restaurant offering the item.
+- **Name:** Name of the menu item.
+- **Description:** Brief description of the item.
+- **Price:** Price of the item.
+- **CreatedOn:** Date when the menu item was added to the restaurant's menu.
+- **UpdatedOn:** Date when the menu item's information was last updated.
+- **IsDeleted:** Flag indicating if the menu item is deleted (0 - False, 1 - True).
+
+### Order Entity:
+
+- **OrderID (Primary Key):** Unique identifier for each order.
+- **UserID (Foreign Key):** User who placed the order.
+- **Category:** Category of the order (Food, Grocery, Courier).
+- **TotalAmount:** Total amount of the order.
+- **DeliveryAddressID (Foreign Key):** Delivery address for the order.
+- **DeliveryTime:** Estimated delivery time for the order.
+- **OrderStatus:** Current status of the order (Pending, Confirmed, Delivered, Cancelled).
+- **PaymentMethod:** Payment method used for the order.
+- **CreatedOn:** Date when the order was placed.
+- **UpdatedOn:** Date when the order's information was last updated.
+- **IsDeleted:** Flag indicating if the order is deleted (0 - False, 1 - True).
+
+### Order Item Entity:
+
+- **OrderItemID (Primary Key):** Unique identifier for each order item.
+- **OrderID (Foreign Key):** Order to which the item belongs.
+- **ItemID:** ID of the menu or grocery item ordered.
+- **ItemType:** Type of item (MenuItem, GroceryItem).
+- **Quantity:** Quantity of the item ordered.
+- **Price:** Price of the item ordered.
+
+### Payment Entity:
+
+- **PaymentID (Primary Key):** Unique identifier for each payment.
+- **UserID (Foreign Key):** User making the payment.
+- **OrderID (Foreign Key):** Order for which the payment was made.
+- **Amount:** Amount paid.
+- **PaymentDate:** Date when the payment was made.
+- **PaymentStatus:** Status of the payment (Successful, Failed).
+- **CreatedOn:** Date when the payment was recorded.
+- **UpdatedOn:** Date when the payment's information was last updated.
+- **IsDeleted:** Flag indicating if the payment is deleted (0 - False, 1 - True).
+
+### Delivery Executive Entity:
+
+- **ExecutiveID (Primary Key):** Unique identifier for each delivery executive.
+- **UserID (Foreign Key):** User associated with the delivery executive.
+- **CurrentLocation:** Current location of the delivery executive (Latitude, Longitude).
+- **AvailabilityStatus:** Availability status of the delivery executive (Available, Busy).
+- **CreatedOn:** Date when the delivery executive was added to the platform.
+- **UpdatedOn:** Date when the delivery executive's information was last updated.
+- **IsDeleted:** Flag indicating if the delivery executive is deleted (0 - False, 1 - True).
+
+### Transaction Entity:
+
+- **TransactionID (Primary Key):** Unique identifier for each transaction.
+- **PaymentID (Foreign Key):** Payment associated with the transaction.
+- **ExecutiveID (Foreign Key):** Delivery executive involved in the transaction.
+- **Amount:** Amount transacted.
+- **TransactionDate:** Date when the transaction occurred.
+- **CreatedOn:** Date when the transaction was recorded.
+- **UpdatedOn:** Date when the transaction's information was last updated.
+
+### Cart Entity:
+
+- **CartID (Primary Key):** Unique identifier for each cart.
+- **UserID (Foreign Key):** User who owns the cart.
+- **ItemID:** ID of the menu or grocery item in the cart.
+- **ItemType:** Type of item in the cart (MenuItem, GroceryItem).
+- **Quantity:** Quantity of the item in the cart.
+- **CreatedOn:** Date when the item was added to the cart.
+- **UpdatedOn:** Date when the cart's information was last updated.
+
+### Courier Service Order Entity:
+
+- **CourierOrderID (Primary Key):** Unique identifier for each courier service order.
+- **OrderID (Foreign Key):** Associated order ID.
+- **PickupAddressID (Foreign Key):** Pickup address for the courier.
+- **DeliveryAddressID (Foreign Key):** Delivery address for the courier.
+- **PackageDescription:** Description of the package being couriered.
+- **PickupTime:** Scheduled pickup time for the courier.
+- **DeliveryTime:** Scheduled delivery time for the courier.
+- **CreatedOn:** Date when the courier service order was placed.
+- **UpdatedOn:** Date when the courier service order's information was last updated.
 
 ---
 
