@@ -471,7 +471,7 @@ In simpler terms, a basis provides the essential "building blocks" for a vector 
 In $`\mathbb{R}^2`$, the standard basis consists of the vectors:
 
 ```math
-   \mathbf{e}\_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \quad \mathbf{e}\_2 = \begin{pmatrix} 0 \\ 1 \end{pmatrix}
+   \mathbf{e}_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \quad \mathbf{e}_2 = \begin{pmatrix} 0 \\ 1 \end{pmatrix}
 ```
 
 These vectors are linearly independent and span the entire $`\mathbb{R}^2`$ space.
