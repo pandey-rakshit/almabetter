@@ -491,6 +491,57 @@ These vectors are linearly independent and any vector in $`\mathbb{R}^2`$ can be
 
 ### **9. What is a linear transformation in linear algebra?**
 
+A linear transformation is a function between vector spaces that preserves the operations of vector addition and scalar multiplication. It's a way of mapping vectors from one space to another while maintaining the structure of the vector space.
+
+**Example:**
+
+Consider a matrix $` A = \begin{pmatrix} 2 & 3 \\ 4 & 5 \end{pmatrix} `$. This matrix defines a linear transformation $` T `$. Let's see how it works:
+
+1. **Definition**:
+
+   - For any vector $`\mathbf{x} = \begin{pmatrix} x_1 \\ x_2 \end{pmatrix}`$, the transformation $` T `$ is defined as:
+
+```math
+     T(\mathbf{x}) = A \mathbf{x} = \begin{pmatrix} 2 & 3 \\ 4 & 5 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \end{pmatrix}
+```
+
+   - This means we multiply the matrix $` A `$ by the vector $`\mathbf{x}`$.
+
+2. **Transforming a Specific Vector**:
+
+   - Let's transform a simple vector $`\mathbf{x} = \begin{pmatrix} 1 \\ 1 \end{pmatrix}`$:
+
+```math
+     T\left(\begin{pmatrix} 1 \\ 1 \end{pmatrix}\right) = \begin{pmatrix} 2 & 3 \\ 4 & 5 \end{pmatrix} \begin{pmatrix} 1 \\ 1 \end{pmatrix} = \begin{pmatrix} 2 \cdot 1 + 3 \cdot 1 \\ 4 \cdot 1 + 5 \cdot 1 \end{pmatrix} = \begin{pmatrix} 5 \\ 9 \end{pmatrix}
+```
+
+   - So, $`\mathbf{x} = \begin{pmatrix} 1 \\ 1 \end{pmatrix}`$ is transformed to $`\begin{pmatrix} 5 \\ 9 \end{pmatrix}`$.
+
+3. **Transforming Standard Basis Vectors**:
+
+   - The standard basis vectors in $`\mathbb{R}^2`$ are $`\mathbf{e}_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}`$ and $`\mathbf{e}_2 = \begin{pmatrix} 0 \\ 1 \end{pmatrix}`$.
+   - Transform $`\mathbf{e}_1`$:
+
+```math
+     T(\mathbf{e}_1) = A \mathbf{e}_1 = \begin{pmatrix} 2 & 3 \\ 4 & 5 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} 2 \\ 4 \end{pmatrix}
+```
+
+   - Transform $`\mathbf{e}_2`$:
+
+```math
+     T(\mathbf{e}_2) = A \mathbf{e}_2 = \begin{pmatrix} 2 & 3 \\ 4 & 5 \end{pmatrix} \begin{pmatrix} 0 \\ 1 \end{pmatrix} = \begin{pmatrix} 3 \\ 5 \end{pmatrix}
+```
+
+4. **Understanding the Transformation**:
+   - The matrix $` A `$ changes the vector $`\mathbf{x}`$ in terms of both magnitude and direction.
+   - By looking at how $` A `$ transforms the standard basis vectors, we can understand how it affects the entire space.
+
+**Practical Application:**
+
+In data science, linear transformations are crucial for techniques like Principal Component Analysis (PCA), where data is transformed to a new coordinate system to reduce dimensionality while retaining variance.
+
+---
+
 ### **10. What is an eigenvector in linear algebra?**
 
 ### **11. What is the gradient in machine learning?**
