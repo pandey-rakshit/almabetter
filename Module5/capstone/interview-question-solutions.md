@@ -80,9 +80,7 @@ Scalars and vectors are fundamental concepts in mathematics and data science, an
   - Vector operations include addition, subtraction, dot product, cross product (for 3D vectors), and scalar multiplication.
     > A vector in a 2-dimensional space (often called a 2D vector) might look like this:
     >
-    > ```math
-    >  \mathbf{v} = \begin{pmatrix} v_1 \\ v_2 \end{pmatrix}
-    > ```
+    >  $`\mathbf{v} = \begin{pmatrix} v_1 \\ v_2 \end{pmatrix}`$   
     >
     > where $v_1 \text{ and } v_2$ are the components of the vector.
 
