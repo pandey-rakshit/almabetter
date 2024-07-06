@@ -544,6 +544,70 @@ In data science, linear transformations are crucial for techniques like Principa
 
 ### **10. What is an eigenvector in linear algebra?**
 
+An eigenvector of a square matrix $`A`$ is a non-zero vector $`\mathbf{v}`$ such that when $`A`$ multiplies $`\mathbf{v}`$, the result is a scalar multiple of $`\mathbf{v}`$. This can be written as:
+
+```math
+A \mathbf{v} = \lambda \mathbf{v}
+```
+Here, $`\lambda`$ is called the eigenvalue corresponding to the eigenvector $`\mathbf{v}`$.
+
+**Conceptual Explanation:**
+
+- **Eigenvectors**: These are special vectors whose direction remains unchanged when a linear transformation is applied. They might get scaled by a certain factor (the eigenvalue), but they don't change direction.
+- **Eigenvalues**: These are the scaling factors by which the eigenvectors are stretched or compressed.
+
+**Example:**
+Consider the matrix $`A = \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix}`$.
+
+To find the eigenvectors and eigenvalues, follow these steps:
+
+1. **Characteristic Equation**:
+
+   - We need to solve the equation $`\det(A - \lambda I) = 0`$ to find the eigenvalues. Here, $`I`$ is the identity matrix.
+   - For our matrix $`A`$:
+
+```math
+     \det\begin{pmatrix} 2-\lambda & 1 \\ 1 & 2-\lambda \end{pmatrix} = 0
+```
+
+```math
+     (2-\lambda)(2-\lambda) - 1 = \lambda^2 - 4\lambda + 3 = 0     
+```
+
+```math
+     (\lambda - 3)(\lambda - 1) = 0     
+```
+   
+   So, the eigenvalues are $`\lambda = 3`$ and $`\lambda = 1`$.
+
+2. **Finding Eigenvectors**:
+
+   - For $`\lambda = 3`$:
+     
+```math
+     (A - 3I) \mathbf{v} = 0 \implies \begin{pmatrix} -1 & 1 \\ 1 & -1 \end{pmatrix} \begin{pmatrix} v_1 \\ v_2 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}
+     
+```
+   
+   Solving, we get $`v_1 = v_2`$. So, an eigenvector corresponding to $`\lambda = 3`$ is $`\mathbf{v} = \begin{pmatrix} 1 \\ 1 \end{pmatrix}`$.
+
+   - For $`\lambda = 1`$:
+     
+```math
+     (A - I) \mathbf{v} = 0 \implies \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix} \begin{pmatrix} v_1 \\ v_2 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}
+     
+```
+     
+   Solving, we get $`v_1 = -v_2`$. So, an eigenvector corresponding to $`\lambda = 1`$ is $`\mathbf{v} = \begin{pmatrix} 1 \\ -1 \end{pmatrix}`$.
+
+**Practical Application:**
+
+- **Data Science**: In techniques like Principal Component Analysis (PCA), eigenvectors of the covariance matrix represent the directions of maximum variance in the data.
+
+- **Physics**: In quantum mechanics, eigenvectors and eigenvalues are used to describe the states and measurable quantities of a system.
+
+---
+
 ### **11. What is the gradient in machine learning?**
 
 ### **12. What is backpropagation in machine learning?**
