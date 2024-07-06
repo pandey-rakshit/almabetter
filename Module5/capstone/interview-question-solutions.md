@@ -12,7 +12,7 @@ A vector is a quantity that has both magnitude and direction, often represented 
 
 $$ \vec{v} = \langle v_1, v_2, \ldots, v_n \rangle $$
 
-where $ v_1, v_2, \ldots, v_n $ are the components of the vector.
+where $v_1, v_2, \ldots, v_n$ are the components of the vector.
 
 In the context of data science and machine learning, vectors are crucial in various ways:
 
@@ -71,19 +71,20 @@ Scalars and vectors are fundamental concepts in mathematics and data science, an
 
 **Mathematical Representation**:
 
-- Scalars are represented by a single number, such as $ s = 5 $.
+- Scalars are represented by a single number, such as $s = 5$.
 
   - Arithmetic operations on scalars are straightforward, including addition, subtraction, and multiplication.
 
-- Vectors are represented by an ordered list of numbers, such as $\vec{v} = \langle 3, 4 \rangle $ in 2D space or $\vec{w} = \langle 2, -1, 5 \rangle$ in 3D space.
+- Vectors are represented by an ordered list of numbers, such as $\vec{v} = \langle 3, 4 \rangle$ in 2D space or $\vec{w} = \langle 2, -1, 5 \rangle$ in 3D space.
 
   - Vector operations include addition, subtraction, dot product, cross product (for 3D vectors), and scalar multiplication.
-
-  > A vector in a 2-dimensional space (often called a 2D vector) might look like this:
-  >
-  > $$\mathbf{v} = \begin{pmatrix} v_1 \\ v_2 \end{pmatrix}$$
-  >
-  > where $ v_1 \text{ and } v_2 $ are the components of the vector.
+    > A vector in a 2-dimensional space (often called a 2D vector) might look like this:
+    >
+    > ```math
+    >  \mathbf{v} = \begin{pmatrix} v_1 \\ v_2 \end{pmatrix}
+    > ```
+    >
+    > where $v_1 \text{ and } v_2$ are the components of the vector.
 
 **Practical Use in Data Science, Data Analytics, and Machine Learning**:
 
@@ -99,7 +100,7 @@ Scalars and vectors are fundamental concepts in mathematics and data science, an
 
   - Example: Each data point in a feature space for machine learning models.
 
-  - Use Case: In a dataset of houses, a house can be represented as a vector of features like $\langle \text{number of bedrooms}, \text{square footage}, \text{age} \rangle $.
+  - Use Case: In a dataset of houses, a house can be represented as a vector of features like $\langle \text{number of bedrooms}, \text{square footage}, \text{age} \rangle$.
 
 **Conclusion**:
 
@@ -145,51 +146,64 @@ Vectors are mathematical entities that represent quantities with both magnitude 
 
 - **Addition**: Combines vectors by adding their corresponding components, visually shown as shifting one vector to end at the tip of another.
 
-  $$\mathbf{u} + \mathbf{v} = \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} + \begin{pmatrix} v_1 \\ v_2 \end{pmatrix} = \begin{pmatrix} u_1 + v_1 \\ u_2 + v_2 \end{pmatrix}$$
+```math
+  \mathbf{u} + \mathbf{v} = \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} + \begin{pmatrix} v_1 \\ v_2 \end{pmatrix} = \begin{pmatrix} u_1 + v_1 \\ u_2 + v_2 \end{pmatrix}
+```
 
 - **Subtraction**: Finds the difference between vectors, illustrated as the vector connecting the tips of
   $\mathbf{u}$ and $\mathbf{v}$.
 
-  $$\mathbf{u} - \mathbf{v} = \begin{pmatrix} u_1 - v_1 \\ u_2 - v_2 \end{pmatrix}$$
+```math
+     \mathbf{u} - \mathbf{v} = \begin{pmatrix} u_1 - v_1 \\ u_2 - v_2 \end{pmatrix}
+```
 
 - **Scalar Multiplication**: Scales a vector by multiplying each component by a scalar, visually stretching or compressing the vector.
 
-  $$c \cdot \mathbf{u} = \begin{pmatrix} c \cdot u_1 \\ c \cdot u_2 \end{pmatrix}$$
+```math
 
-  **Applications in Data Science**:
+  c \cdot \mathbf{u} = \begin{pmatrix} c \cdot u_1 \\ c \cdot u_2 \end{pmatrix}
+```
 
-  - **Feature Engineering**: Vectors are used to represent features in datasets, where addition and scalar multiplication can manipulate feature values.
+**Applications in Data Science**:
 
-Certainly! Let's simplify it while retaining the key points:
-
----
+- **Feature Engineering**: Vectors are used to represent features in datasets, where addition and scalar multiplication can manipulate feature values.
 
 **Dot Product**
 
 - **Definition**: The dot product calculates a scalar by summing the products of corresponding components of two vectors, indicating their similarity and ability to project one onto another.
 
-  $$ \mathbf{u} \cdot \mathbf{v} = u_1 v_1 + u_2 v_2 $$
+```math
+   \mathbf{u} \cdot \mathbf{v} = u_1 v_1 + u_2 v_2
+```
 
 - **Purpose**:
 
   - **Similarity Measurement**: Essential in data science for measuring similarity between vectors, such as in cosine similarity used in recommendation systems and NLP.
   - **Projection**: Facilitates vector projection, aiding in tasks like dimensionality reduction and solving linear systems.
 
-- **Example**: Suppose $ \mathbf{u} = \begin{pmatrix} 2 \\ 3 \end{pmatrix} $ and $ \mathbf{v} = \begin{pmatrix} 1 \\ 4 \end{pmatrix} $.
+- **Example**: Suppose
 
-  $$ \mathbf{u} \cdot \mathbf{v} = (2 \cdot 1) + (3 \cdot 4) = 2 + 12 = 14 $$
+```math
+\mathbf{u} = \begin{pmatrix} 2 \\ 3 \end{pmatrix} \text{ and } \mathbf{v} = \begin{pmatrix} 1 \\ 4 \end{pmatrix}
+```
 
-  Thus, $ \mathbf{u} \cdot \mathbf{v} = 14 $ illustrates their alignment in vector space.
+```math
+\mathbf{u} \cdot \mathbf{v} = (2 \cdot 1) + (3 \cdot 4) = 2 + 12 = 14
+```
+
+Thus, $`\mathbf{u} \cdot \mathbf{v} = 14`$ illustrates their alignment in vector space.
 
 3.  **Cross Product**
 
     - **Definition (3D Only)**: Produces a vector perpendicular to both vectors, shown as a vector orthogonal to the plane formed by $\mathbf{u}$ and $\mathbf{v}$.
 
-      $$\mathbf{u} \times \mathbf{v} = \begin{pmatrix} u_2 v_3 - u_3 v_2 \\ u_3 v_1 - u_1 v_3 \\ u_1 v_2 - u_2 v_1 \end{pmatrix}$$
+```math
+   \mathbf{u} \times \mathbf{v} = \begin{pmatrix} u_2 v_3 - u_3 v_2 \\ u_3 v_1 - u_1 v_3 \\ u_1 v_2 - u_2 v_1 \end{pmatrix}$$
+```
 
-      **Purpose**:
+**Purpose**:
 
-      - **Geometric Interpretation**: In data science, the cross product may be used in specific geometric calculations, such as determining orientations or transformations.
+- **Geometric Interpretation**: In data science, the cross product may be used in specific geometric calculations, such as determining orientations or transformations.
 
 4.  **Magnitude and Unit Vector**
 
@@ -237,13 +251,15 @@ Vectors can be multiplied by a scalar by scaling each component of the vector in
 
 1. **Definition and Operation**:
 
-   - Scalar multiplication of a vector $$\mathbf{v} = \begin{pmatrix} v_1 \\ v_2 \end{pmatrix}$$ by a scalar $c$ results in a new vector
+   - Scalar multiplication of a vector $`\mathbf{v} = \begin{pmatrix} v_1 \\ v_2 \end{pmatrix}`$ by a scalar $`c`$ results in a new vector
 
-   $$c \cdot \mathbf{v} = \begin{pmatrix} c \cdot v_1 \\ c \cdot v_2 \end{pmatrix}$$
+```math
+   c \cdot \mathbf{v} = \begin{pmatrix} c \cdot v_1 \\ c \cdot v_2 \end{pmatrix}
+```
 
-   - Each component of the vector is multiplied by the scalar, preserving the vector's direction but scaling its magnitude.
+- Each component of the vector is multiplied by the scalar, preserving the vector's direction but scaling its magnitude.
 
-2. **Purpose and Applications**:
+3. **Purpose and Applications**:
 
    - **Scaling and Transformation**: Scalar multiplication is used to scale vectors to adjust their magnitude, which is crucial in applications such as scaling forces in physics or resizing data points in machine learning.
 
@@ -261,7 +277,7 @@ The magnitude of a vector represents its length or size in a given space. It is 
 
 1. **Definition**:
 
-   - Mathematically, for a vector $\mathbf{v} = \begin{pmatrix} v_1 \\ v_2 \end{pmatrix}$, the magnitude $|\mathbf{v}|$ is calculated as:
+   - Mathematically, for a vector $`\mathbf{v} = \begin{pmatrix} v_1 \\ v_2 \end{pmatrix}`$, the magnitude $`|\mathbf{v}|`$ is calculated as:
 
      $$|\mathbf{v}| = \sqrt{v_1^2 + v_2^2}$$
 
@@ -287,18 +303,18 @@ The magnitude of a vector represents its length or size in a given space. It is 
 
 **Example**:
 
-- For example, in 2D space, the magnitude of a velocity vector $\mathbf{v} = \begin{pmatrix} 3 \\ 4 \end{pmatrix}$ would be
+- For example, in 2D space, the magnitude of a velocity vector $`\mathbf{v} = \begin{pmatrix} 3 \\ 4 \end{pmatrix}`$ would be
   $$|\mathbf{v}| = \sqrt{3^2 + 4^2} = 5$$
 
 ---
 
 ### **6. How can the direction of a vector be determined?**
 
-Determining the direction of a vector involves understanding its orientation relative to a reference axis or another vector. In mathematical terms, the direction of a vector $\mathbf{v}$ is often described by a unit vector $\hat{\mathbf{v}}$, which points in the same direction as $\mathbf{v}$ but has a magnitude of 1. This unit vector is derived by dividing the vector $\mathbf{v}$ by its magnitude $|\mathbf{v}|$. Geometrically, the direction can be visualized as the angle the vector makes with a specified axis, typically the positive x-axis in two dimensions. This angle can be calculated using trigonometric functions, providing a quantitative measure of the vector's orientation in space. Understanding vector direction is fundamental in fields such as physics, engineering, and data science, where vectors represent forces, velocities, and dimensions in mathematical models and simulations.
+Determining the direction of a vector involves understanding its orientation relative to a reference axis or another vector. In mathematical terms, the direction of a vector $`\mathbf{v}`$ is often described by a unit vector $`\hat{\mathbf{v}}`$, which points in the same direction as $`\mathbf{v}`$ but has a magnitude of 1. This unit vector is derived by dividing the vector $`\mathbf{v}`$ by its magnitude $`|\mathbf{v}|`$. Geometrically, the direction can be visualized as the angle the vector makes with a specified axis, typically the positive x-axis in two dimensions. This angle can be calculated using trigonometric functions, providing a quantitative measure of the vector's orientation in space. Understanding vector direction is fundamental in fields such as physics, engineering, and data science, where vectors represent forces, velocities, and dimensions in mathematical models and simulations.
 
 1. **Magnitude of a Vector**:
 
-   - **Definition**: The magnitude (or length) of a vector $\mathbf{v} = \begin{pmatrix} v_1 \\ v_2 \end{pmatrix}$ in a 2-dimensional space is calculated using the Euclidean norm:
+   - **Definition**: The magnitude (or length) of a vector $`\mathbf{v} = \begin{pmatrix} v_1 \\ v_2 \end{pmatrix}`$ in a 2-dimensional space is calculated using the Euclidean norm:
 
      $$|\mathbf{v}| = \sqrt{v_1^2 + v_2^2}$$
 
@@ -306,9 +322,9 @@ Determining the direction of a vector involves understanding its orientation rel
 
    - **Example**:
 
-     - For vector $\mathbf{v} = \begin{pmatrix} 3 \\ 4 \end{pmatrix}$:
+     - For vector $`\mathbf{v} = \begin{pmatrix} 3 \\ 4 \end{pmatrix}`$:
 
-       $$ |\mathbf{v}| = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5 $$
+       $$|\mathbf{v}| = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5$$
 
        - The magnitude $|\mathbf{v}|$ is 5 units.
 
@@ -316,35 +332,41 @@ Determining the direction of a vector involves understanding its orientation rel
 
    - **Unit Vector Approach**:
 
-     - Calculate the unit vector $\hat{\mathbf{v}}$ to determine the direction of $\mathbf{v}$:
+     - Calculate the unit vector $`\hat{\mathbf{v}}`$ to determine the direction of $`\mathbf{v}`$:
 
-       $$\hat{\mathbf{v}} = \frac{\mathbf{v}}{|\mathbf{v}|} = \frac{\begin{pmatrix} v_1 \\ v_2 \end{pmatrix}}{\sqrt{v_1^2 + v_2^2}}$$
+```math
+       \hat{\mathbf{v}} = \frac{\mathbf{v}}{|\mathbf{v}|} = \frac{\begin{pmatrix} v_1 \\ v_2 \end{pmatrix}}{\sqrt{v_1^2 + v_2^2}}
+```
 
-     - The unit vector $\hat{\mathbf{v}}$ has a magnitude of 1 and points in the direction of $\mathbf{v}$.
+- The unit vector $\hat{\mathbf{v}}$ has a magnitude of 1 and points in the direction of $\mathbf{v}$.
 
-     - **Example**:
+  - **Example**:
 
-       - Given $\mathbf{v} = \begin{pmatrix} 3 \\ 4 \end{pmatrix}$:
+    - Given $`\mathbf{v} = \begin{pmatrix} 3 \\ 4 \end{pmatrix}`$:
 
-         $$ \hat{\mathbf{v}} = \frac{\begin{pmatrix} 3 \\ 4 \end{pmatrix}}{5} = \begin{pmatrix} \frac{3}{5} \\ \\ \frac{4}{5} \end{pmatrix} $$
+```math
+         \hat{\mathbf{v}} = \frac{\begin{pmatrix} 3 \\ 4 \end{pmatrix}}{5} = \begin{pmatrix} \frac{3}{5} \\ \\ \frac{4}{5} \end{pmatrix}
+```
 
-       - This unit vector $\hat{\mathbf{v}}$ indicates the direction in which $\mathbf{v}$ points.
+- This unit vector $`\hat{\mathbf{v}}`$ indicates the direction in which $`\mathbf{v}`$ points.
 
-   - **Angle Calculation**:
+- **Angle Calculation**:
 
-     - **Cosine of Angle**: Another approach is to calculate the angle $\theta$ that the vector makes with a reference axis (usually the positive x-axis).
+  - **Cosine of Angle**: Another approach is to calculate the angle $\theta$ that the vector makes with a reference axis (usually the positive x-axis).
 
-       $$ \theta = \cos^{-1}\left(\frac{v_1}{|\mathbf{v}|}\right)$$
+```math
+       \theta = \cos^{-1}\left(\frac{v_1}{|\mathbf{v}|}\right)
+```
 
-     - Here, $v_1$ is the x-component of $\mathbf{v}$.
+- Here, $v_1$ is the x-component of $\mathbf{v}$.
 
-     - **Example**:
+  - **Example**:
 
-       - For $\mathbf{v} = \begin{pmatrix} 3 \\ 4 \end{pmatrix}$:
+    - For $`\mathbf{v} = \begin{pmatrix} 3 \\ 4 \end{pmatrix}`$ :
 
-         $$ \theta = \cos^{-1}\left(\frac{3}{5}\right) $$
+      $$\theta = \cos^{-1}\left(\frac{3}{5}\right)$$
 
-         - This angle $\theta$ measures the direction of $\mathbf{v}$ relative to the positive x-axis.
+      - This angle $\theta$ measures the direction of $\mathbf{v}$ relative to the positive x-axis.
 
 3. **Geometric Interpretation**:
 
@@ -365,24 +387,24 @@ The difference between a square matrix and a rectangular matrix:
 
 1. **Square Matrix**:
 
-   - **Dimensions**: A square matrix has an equal number of rows and columns. For example, an \( n \times n \) matrix where \( n \) is a positive integer.
-   - **Example**: \( 2 \times 2 \), \( 3 \times 3 \), etc.
+   - **Dimensions**: A square matrix has an equal number of rows and columns. For example, an $`n \times n`$ matrix where n is a positive integer.
+   - **Example**: $`2 \times 2`$, $`3 \times 3`$, etc.
    - **Properties**:
-     - Can have an inverse if and only if it is nonsingular (determinant ≠ 0).
+     - Can have an inverse if and only if it is nonsingular (determinant $`\neq`$ 0).
      - Has an identity matrix of the same size.
      - Determinant is defined and provides important information about the matrix.
      - Multiplication is commutative under certain conditions (e.g., scalar multiplication).
 
 2. **Rectangular Matrix**:
-   - **Dimensions**: A rectangular matrix has a different number of rows and columns. For example, \( m \times n \) where \( m \neq n \).
-   - **Example**: \( 2 \times 3 \), \( 3 \times 2 \), etc.
+   - **Dimensions**: A rectangular matrix has a different number of rows and columns. For example, $`m \times n`$ where $`m \neq n`$.
+   - **Example**: $`2 \times 3`$, $`3 \times 2`$, etc.
    - **Properties**:
      - Does not have an inverse in the traditional sense, but can have a pseudoinverse (Moore-Penrose inverse).
      - Does not have an identity matrix in the same sense as a square matrix.
      - Determinant is not defined.
      - Matrix multiplication is not commutative in general.
 
-### Summary:
+**Summary:**
 
 - **Square Matrix**: Equal rows and columns, can have an inverse and identity matrix, determinant is defined.
 - **Rectangular Matrix**: Different rows and columns, no traditional inverse or identity matrix, determinant is not defined, and multiplication is not commutative.
@@ -433,7 +455,7 @@ In data science, both square matrices and rectangular matrices play crucial role
 5. **Sparse Matrix Representations**:
    - **Application**: Many real-world datasets are sparse (mostly zero values), and efficient data structures (like compressed sparse row (CSR) format) are used to store and manipulate rectangular matrices in memory and computations.
 
-### Summary:
+**Summary:**
 
 - **Square Matrices** are used in advanced mathematical computations, graph algorithms, optimization, and matrix factorization techniques in data science.
 - **Rectangular Matrices** are central to data representation, machine learning models, image/text processing, and handling structured datasets in various data science applications.
