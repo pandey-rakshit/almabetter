@@ -460,14 +460,6 @@ In data science, both square matrices and rectangular matrices play crucial role
 
 ### **8. What is a basis in linear algebra?**
 
-### Answering "What is a Basis?" in an Interview
-
-When answering the question "What is a basis?" in an interview, it is essential to provide a clear and concise explanation that covers the fundamental concepts. Here’s how you can structure your response:
-
----
-
-#### What is a Basis?
-
 A basis in linear algebra is a set of vectors that serves as the fundamental building blocks for a vector space. To qualify as a basis, this set of vectors must satisfy two crucial conditions:
 
 1. **Linear Independence**:
@@ -482,11 +474,7 @@ A basis in linear algebra is a set of vectors that serves as the fundamental bui
 - Consider the vector space $`\mathbb{R}^2`$. A common basis for this space is the set of vectors:
 
 ```math
-<<<<<<< Updated upstream
-   \mathbf{e}_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \quad \mathbf{e}_2 = \begin{pmatrix} 0 \\ 1 \end{pmatrix}
-=======
   \mathbf{e}_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \quad \mathbf{e}_2 = \begin{pmatrix} 0 \\ 1 \end{pmatrix}
->>>>>>> Stashed changes
 ```
 
 These vectors are linearly independent and any vector in $`\mathbb{R}^2`$ can be expressed as a linear combination of $`\mathbf{e}_1`$ and $`\mathbf{e}_2`$.
