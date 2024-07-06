@@ -80,7 +80,7 @@ Scalars and vectors are fundamental concepts in mathematics and data science, an
   - Vector operations include addition, subtraction, dot product, cross product (for 3D vectors), and scalar multiplication.
     > A vector in a 2-dimensional space (often called a 2D vector) might look like this:
     >
-    >  $`\mathbf{v} = \begin{pmatrix} v_1 \\ v_2 \end{pmatrix}`$   
+    > $`\mathbf{v} = \begin{pmatrix} v_1 \\ v_2 \end{pmatrix}`$
     >
     > where $v_1 \text{ and } v_2$ are the components of the vector.
 
@@ -459,6 +459,27 @@ In data science, both square matrices and rectangular matrices play crucial role
 - **Rectangular Matrices** are central to data representation, machine learning models, image/text processing, and handling structured datasets in various data science applications.
 
 ### **8. What is a basis in linear algebra?**
+
+A basis of a vector space is a set of vectors that has two key properties:
+
+1. **Linear Independence**: The vectors in the basis are linearly independent, meaning no vector in the basis can be expressed as a linear combination of the others.
+2. **Spanning the Vector Space**: The basis vectors span the vector space, meaning any vector in the space can be expressed as a linear combination of the basis vectors.
+
+In simpler terms, a basis provides the essential "building blocks" for a vector space. Every vector in the vector space can be constructed from these basis vectors using linear combinations.
+
+**Example**:
+In $`\mathbb{R}^2`$, the standard basis consists of the vectors:
+
+```math
+   \mathbf{e}\_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \quad \mathbf{e}\_2 = \begin{pmatrix} 0 \\ 1 \end{pmatrix}
+```
+
+These vectors are linearly independent and span the entire $`\mathbb{R}^2`$ space.
+
+**Dimension**:
+The dimension of a vector space is the number of vectors in the basis. For instance, $`\mathbb{R}^2`$ has a dimension of 2 because its basis consists of two vectors.
+
+---
 
 ### **9. What is a linear transformation in linear algebra?**
 
