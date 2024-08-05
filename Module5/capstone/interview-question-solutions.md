@@ -71,8 +71,8 @@ A square matrix has the same number of rows and columns, while a rectangular mat
 
 **Example:**
 
-- Square Matrix: $\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$
-- Rectangular Matrix: $\begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{pmatrix}$
+- Square Matrix: $`\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}`$
+- Rectangular Matrix: $`\begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{pmatrix}`$
 
 ### 8. What is a basis in linear algebra?
 
@@ -93,8 +93,8 @@ If T is a linear transformation that doubles the components of a vector, then T(
 An eigenvector of a matrix is a vector that, when the matrix is applied to it, only gets scaled by a certain factor (the eigenvalue) and does not change direction.
 
 **Example:**  
-For the matrix $\begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix}$, the vector (1, 0) is an eigenvector with eigenvalue 2, because:
+For the matrix $`\begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix}`$, the vector (1, 0) is an eigenvector with eigenvalue 2, because:
 
-$$ \begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} 2 \\ 0 \end{pmatrix} = 2 \begin{pmatrix} 1 \\ 0 \end{pmatrix} $$
+$`\begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} 2 \\ 0 \end{pmatrix} = 2 \begin{pmatrix} 1 \\ 0 \end{pmatrix}`$
 
 I hope these answers help! Let me know if you need any more explanations or examples.
