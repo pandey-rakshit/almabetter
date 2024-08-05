@@ -97,4 +97,80 @@ For the matrix $`\begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix}`$, the vector (1, 
 
 $`\begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} 2 \\ 0 \end{pmatrix} = 2 \begin{pmatrix} 1 \\ 0 \end{pmatrix}`$
 
-I hope these answers help! Let me know if you need any more explanations or examples.
+### 11. What is the gradient in machine learning?
+
+The gradient is a vector that points in the direction of the steepest increase of a function. In machine learning, we often use it to find the minimum value of a loss function (a measure of how bad our model is).
+
+**Example:**  
+If you think of a hill, the gradient at any point shows the direction to climb to reach the top fastest. In machine learning, we usually want to go in the opposite direction (downhill) to minimize errors.
+
+### 12. What is backpropagation in machine learning?
+
+Backpropagation is a method used to train neural networks. It works by calculating the gradient of the loss function with respect to each weight by using the chain rule of calculus, and then updating the weights to reduce the loss.
+
+**Example:**  
+Imagine you are adjusting the aim in a video game to hit a target. You first shoot (forward pass), see where you missed (calculate error), and then adjust your aim (update weights) to get closer next time.
+
+### 13. What is the concept of a derivative in calculus?
+
+A derivative measures how a function changes as its input changes. It represents the slope of the function at any given point.
+
+**Example:**  
+If you are driving a car and you look at how your speed changes with time, the derivative of your position with respect to time is your speed.
+
+### 14. How are partial derivatives used in machine learning?
+
+Partial derivatives measure how a function changes as one of its inputs changes, keeping the other inputs constant. In machine learning, they help in understanding how changing each weight affects the loss function.
+
+**Example:**  
+If you are baking a cake, and you want to know how changing the amount of sugar affects the taste while keeping all other ingredients the same, you're looking at a partial derivative.
+
+### 15. What is probability theory?
+
+Probability theory is the branch of mathematics that deals with the likelihood of events happening. It provides tools to quantify uncertainty.
+
+**Example:**  
+If you flip a coin, probability theory helps you calculate that there is a 50% chance it will land on heads and a 50% chance it will land on tails.
+
+### 16. What are the primary components of probability theory?
+
+The primary components include:
+
+- **Random Experiments:** Actions with uncertain outcomes (e.g., rolling a dice).
+- **Sample Space:** All possible outcomes of a random experiment (e.g., {1, 2, 3, 4, 5, 6} for a dice roll).
+- **Events:** A subset of the sample space (e.g., rolling an even number).
+- **Probability Measure:** A function that assigns a probability to each event.
+
+### 17. What is conditional probability, and how is it calculated?
+
+Conditional probability is the probability of an event occurring given that another event has already occurred. It's calculated using the formula:
+
+$$ P(A|B) = \frac{P(A \cap B)}{P(B)} $$
+
+**Example:**  
+If you have a deck of cards and you want to know the probability of drawing an Ace given that you've already drawn a King, you use conditional probability.
+
+### 18. What is Bayes' theorem, and how is it used?
+
+Bayes' theorem relates the conditional probability of two events. It is expressed as:
+
+$$ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} $$
+
+It is used to update the probability of a hypothesis based on new evidence.
+
+**Example:**  
+If a doctor knows the probability of a patient having a disease and the probability of a test result given the disease, Bayes' theorem helps the doctor update the probability of the disease based on the test result.
+
+### 19. What is a random variable, and how is it different from a regular variable?
+
+A random variable is a variable that takes on different values based on the outcome of a random event. Unlike a regular variable that has a fixed value, a random variable has a set of possible values and a probability distribution.
+
+**Example:**  
+Rolling a dice and recording the result is a random variable because the outcome can be any number from 1 to 6, each with a probability.
+
+### 20. What is the law of large numbers, and how does it relate to probability theory?
+
+The law of large numbers states that as the number of trials in a random experiment increases, the average of the results will get closer to the expected value.
+
+**Example:**  
+If you flip a coin many times, the proportion of heads will get closer to 50% as the number of flips increases.
