@@ -174,3 +174,100 @@ The law of large numbers states that as the number of trials in a random experim
 
 **Example:**  
 If you flip a coin many times, the proportion of heads will get closer to 50% as the number of flips increases.
+
+### 21. What is the central limit theorem, and how is it used?
+
+The central limit theorem (CLT) states that the distribution of the sample mean of a large number of independent, identically distributed variables will be approximately normally distributed, regardless of the original distribution of the variables. This is incredibly useful because it allows us to make inferences about population parameters using the normal distribution.
+
+**Example:**
+If you measure the heights of 30 people from different schools, their average height will form a normal distribution, even if the heights themselves do not follow a normal distribution.
+
+### 22. What is the difference between discrete and continuous probability distributions?
+
+- **Discrete Probability Distribution:** Deals with variables that can take on distinct, separate values. The probabilities are associated with individual points.
+
+  - **Example:** Rolling a six-sided die. The possible outcomes are 1, 2, 3, 4, 5, and 6.
+
+- **Continuous Probability Distribution:** Deals with variables that can take on any value within a range. The probabilities are associated with intervals rather than individual points.
+  - **Example:** The height of students in a class. Heights can be any value within a range, like 150.5 cm, 150.55 cm, etc.
+
+### 23. What are some common measures of central tendency, and how are they calculated?
+
+- **Mean:** The average of all the data points.
+  $$ \text{Mean} = \frac{\sum x_i}{n} $$
+  **Example:** For data points 2, 3, 4, the mean is $`\frac{2+3+4}{3} = 3`$.
+
+- **Median:** The middle value when the data points are arranged in order.
+  **Example:** For data points 2, 3, 4, the median is 3. If the data points are 2, 3, 4, 5, the median is $`\frac{3+4}{2} = 3.5`$.
+
+- **Mode:** The most frequent value in the dataset.
+  **Example:** For data points 2, 2, 3, 4, the mode is 2.
+
+### 24. What is the purpose of using percentiles and quartiles in data summarization?
+
+Percentiles and quartiles help summarize and understand the distribution of data. They indicate the relative standing of a data point within a dataset.
+
+- **Percentiles:** Indicate the value below which a given percentage of observations fall.
+  **Example:** The 90th percentile is the value below which 90% of the data points lie.
+
+- **Quartiles:** Divide data into four equal parts.
+  - **Q1 (1st Quartile):** 25th percentile.
+  - **Q2 (2nd Quartile/Median):** 50th percentile.
+  - **Q3 (3rd Quartile):** 75th percentile.
+
+### 25. How do you detect and treat outliers in a dataset?
+
+**Detection:**
+
+- **Visual Methods:** Box plots, scatter plots.
+- **Statistical Methods:** Z-scores (values more than 3 standard deviations from the mean), IQR method (values outside 1.5 \* IQR from Q1 or Q3).
+
+**Treatment:**
+
+- **Remove Outliers:** If they are errors or irrelevant.
+- **Cap Outliers:** Limit their values to a certain threshold.
+- **Transform Data:** Apply log transformation or other methods to reduce the impact of outliers.
+
+**Example:** If most of your data points are between 10 and 20, but you have one point at 100, that's likely an outlier.
+
+### 26. How do you use the central limit theorem to approximate a discrete probability distribution?
+
+When dealing with a large sample size from a discrete probability distribution, the central limit theorem allows you to approximate the distribution of the sample mean as a normal distribution.
+
+**Example:** If you roll a die 30 times and calculate the average roll, the distribution of these averages will be approximately normal, even though the roll outcomes are discrete.
+
+### 27. How do you test the goodness of fit of a discrete probability distribution?
+
+**Chi-Square Test:**
+
+- Compare observed frequencies with expected frequencies.
+- Calculate the chi-square statistic:
+  $$ \chi^2 = \sum \frac{(O_i - E_i)^2}{E_i} $$
+  Where $`O_i`$ is the observed frequency and $`E_i`$ is the expected frequency.
+- Compare the calculated chi-square value with the critical value from the chi-square distribution table.
+
+**Example:** If you want to see if a die is fair, you roll it 60 times and compare the observed frequencies of each outcome to the expected frequency (10 for each number).
+
+### 28. What is a joint probability distribution?
+
+A joint probability distribution gives the probability of two or more events happening at the same time. It shows the probability of different combinations of outcomes for multiple random variables.
+
+**Example:** If you roll two dice, the joint probability distribution would show the probability of getting each possible pair of outcomes (e.g., (1,1), (1,2), etc.).
+
+### 29. How do you calculate the joint probability distribution?
+
+To calculate the joint probability distribution, you need to determine the probability of each combination of outcomes for the random variables.
+
+**Example:**
+If you roll two dice:
+
+- Probability of (1,1) is $` \frac{1}{36} `$ (since there are 6 sides on each die and 36 possible outcomes in total).
+
+### 30. What is the difference between a joint probability distribution and a marginal probability distribution?
+
+- **Joint Probability Distribution:** Gives the probability of different combinations of outcomes for multiple random variables.
+
+  - **Example:** Probability of rolling a 1 on the first die and a 2 on the second die.
+
+- **Marginal Probability Distribution:** Gives the probability of a single event happening, irrespective of other events.
+  - **Example:** Probability of rolling a 1 on the first die, regardless of what happens on the second die.
