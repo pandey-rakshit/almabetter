@@ -537,11 +537,11 @@ To find the probabilities, count the favorable outcomes and divide by the total 
 
 - **Sum of 5:** Possible pairs: (1,4), (2,3), (3,2), (4,1) → 4 outcomes.
 
-  $$ P(\text{sum} = 5) = \frac{4}{36} = \frac{1}{9} $$
+  $$P(\text{sum} = 5) = \frac{4}{36} = \frac{1}{9}$$
 
 - **Sum of 8:** Possible pairs: (2,6), (3,5), (4,4), (5,3), (6,2) → 5 outcomes.
 
-  $$ P(\text{sum} = 8) = \frac{5}{36} $$
+  $$P(\text{sum} = 8) = \frac{5}{36}$$
 
 ### 60. What is the difference between Descriptive and Inferential Statistics?
 
