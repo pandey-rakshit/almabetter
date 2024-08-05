@@ -194,7 +194,9 @@ If you measure the heights of 30 people from different schools, their average he
 ### 23. What are some common measures of central tendency, and how are they calculated?
 
 - **Mean:** The average of all the data points.
-  $$ \text{Mean} = \frac{\sum x_i}{n} $$
+
+  $$\text{Mean} = \frac{\sum x_i}{n}$$
+
   **Example:** For data points 2, 3, 4, the mean is $`\frac{2+3+4}{3} = 3`$.
 
 - **Median:** The middle value when the data points are arranged in order.
@@ -242,8 +244,11 @@ When dealing with a large sample size from a discrete probability distribution, 
 
 - Compare observed frequencies with expected frequencies.
 - Calculate the chi-square statistic:
-  $$ \chi^2 = \sum \frac{(O_i - E_i)^2}{E_i} $$
+
+  $$\chi^2 = \sum \frac{(O_i - E_i)^2}{E_i}$$
+
   Where $`O_i`$ is the observed frequency and $`E_i`$ is the expected frequency.
+
 - Compare the calculated chi-square value with the critical value from the chi-square distribution table.
 
 **Example:** If you want to see if a die is fair, you roll it 60 times and compare the observed frequencies of each outcome to the expected frequency (10 for each number).
